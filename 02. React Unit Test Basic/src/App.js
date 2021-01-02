@@ -1,7 +1,7 @@
 import React from "react";
 
 function App() {
-  return <div>Hello React Hot!</div>;
+  return <div data-testid="component-app">Hello React Hot!</div>;
 }
 
 export default App;

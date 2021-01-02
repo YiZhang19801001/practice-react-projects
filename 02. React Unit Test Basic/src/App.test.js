@@ -1,7 +1,9 @@
-function sum(a, b) {
-  return a + b;
-}
+import React from "react";
+import { render } from "@testing-library/react";
+import App from "./App";
 
 test("component render without errors", () => {
-  expect(sum(1, 2)).toBe(3);
+  const { queryByTestId } = render(<App />);
+  const rootDom = queryByTestId("component-app");
+  expect(rootDom).toBeInTheDocument();
 });
